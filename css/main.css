@@ -1,0 +1,821 @@
+/* ====================================
+                  Main CSS
+ ====================================*/
+
+* {
+  box-sizing: border-box;
+}
+
+body{
+  background-color: black;
+  color: gray;
+}
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 4rem;
+  color: white;
+  text-align: center;
+}
+h2 {
+  padding: 0;
+  margin: 0;
+  font-size: 3rem;
+  color: black;
+  text-align: center;
+}
+h3 {
+  padding: 0;
+  margin: 0;
+  font-size: 2rem;
+  color: #C490E4;
+  text-align: center;
+}
+h4 {
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  color: #C490E4;
+  text-align: center;
+}
+p {
+  padding: 0.5em;
+  font-size: 1rem;
+  color: rgba(251,241,222,1);
+  margin: 0;
+
+}
+header {
+  background-color: black;
+  color: white;
+  margin: 10px;
+  width: 98%;
+  min-height: 5vh;
+  border: 2px solid turquoise;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: center;
+  visibility: collapse;
+}
+
+
+
+
+/* ====================================
+              IDs and Classes
+ ====================================*/
+
+.first_section_div{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.5rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+  animation-name: example;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode:forwards;
+  animation-timing-function: ease-in-out;
+  transform: translateY(-100vh);
+}
+
+@keyframes example {
+  from {
+    transform: translateY(-100vh);
+  }
+  30% {
+    transform: translateY(20vh);
+    background-color: turquoise;
+    transform: rotate(45deg);
+
+  }
+  45%{
+    transform: translateX(-100vw);
+  }
+  45%{
+    opacity: 0;
+  }
+  60%{
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+  68%{
+    opacity: 1;
+  }
+
+  80% {
+    transform: rotate(-45deg);
+  }
+
+  to {
+    transform: translateY(35vh);
+  }
+}
+
+.icon {
+  font-size: 2rem;
+}
+
+.main_button{
+  height: 45px;
+  width: 150px;
+  padding: 10px 15px;
+  margin: 10px 0px;
+  background-color: turquoise;
+  border: 1px solid rgb(246, 198, 234);
+  color: black;
+  border-radius: 10px;
+  box-shadow: 1px -2px 5px 1px rgba(246, 198, 234, 0.5);
+}
+.secondary_button{
+  height: 45px;
+  width: 150px;
+  padding: 0.5rem 1rem;
+  margin: 10px 0px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border: 2px solid turquoise;
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px 1px rgba(246, 198, 234, 0.5);
+}
+
+
+}
+#logo {
+  padding: 5px 0px 0px 10px;
+  font-size: 1.5rem;
+}
+
+/* =========== FIRST SECTION =========== */
+#first_section {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  height: 105vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
+                  url("../pics/me.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
+/* =========== SECOND SECTION =========== */
+#second_section {
+  display: flex;
+  flex-flow: column wrap;
+  align-content:center;
+  align-items:center;
+  justify-content:center;
+  height: 100vh;
+  background: linear-gradient(to top, #a8ff78, #78ffd6);
+  position: relative;
+  overflow: hidden;
+
+}
+#second_section_div{
+
+  display: flex;
+  flex-flow: column wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+}
+#moveButAlso{
+  margin: 10px 0 0 0;
+}
+.butAlso {
+  margin: 5px 0px;
+  text-align: center;
+  font-size: 1.5rem;
+  color: rgba(91,0,166,1);
+  padding: 0.3em;
+}
+
+
+/* ME APEARING FROM TOP RIGHT */
+#meFromTopRight{
+  position: absolute;
+  bottom: 100vh;
+  left: 85%;
+  transform: rotate(220deg);
+
+}
+.meFromTopRight_a{
+  animation-name: meLeft2;
+  animation-duration: 4s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode:both;
+}
+
+@keyframes meLeft2 {
+
+  70% {
+    transform:translateY(40vh) translateX(-15vh) rotate(220deg);
+  }
+}
+
+#me_from_side2{
+  width: 40vh;
+  height: auto;
+}
+
+/* ME APEARING FROM LEFT */
+#meFromLeft{
+  position: absolute;
+  transform: rotate(90deg);
+  right:100vw;
+
+}
+.meFromLeft_a {
+  animation-name: meLeft;
+  animation-duration: 3s;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-fill-mode:both;
+}
+
+
+@keyframes meLeft {
+
+  70% {
+    transform: translateX(60%) rotate(90deg);
+  }
+  100%{
+    transform: translateX(0%) rotate(90deg);
+  }
+}
+
+#me_from_side{
+  width: 40vh;
+  height: auto;
+}
+
+/* =========== THIRD SECTION =========== */
+
+#third_section{
+  position: relative;
+  min-height: 20vh;
+  background-color: #00FFEC;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(2,minmax(100px,auto));
+  grid-template-areas:
+  "item1 item2 item3 item4"
+  "item1 item2 item3 item4";
+  grid-gap: 0;
+  overflow: hidden;
+
+}
+#item1 {
+  grid-area: item1;
+  background: #FFF2D4;
+
+}
+
+#item2 {
+  grid-area: item2;
+  background: #FFF2D4;
+}
+
+#item3 {
+  grid-area: item3;
+  background: #FFF2D4;
+}
+
+
+#item4 {
+  grid-area: item4;
+  background: #FFF2D4;
+}
+.item_a{
+  animation: item 1s ease-in-out 1s;
+}
+
+#choose {
+  /* USE THIS TO POSITION SOMETHING CENTER
+  MAKE SURE PARENT IS POSTION RELATIVE */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%
+}
+@keyframes item {
+
+  0% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: rotateX(40deg);
+  }
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+
+/* =========== FOURTH SECTION =========== */
+
+#fourth_section{
+  min-height: 20vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(to right, #40e0d0, #ff8c00, #ff0080);
+  border: 2px solid white;
+  border-radius: 25px;
+  position: relative;
+  box-shadow: -1px -2px 10px 1px rgba(176, 253, 205, 1);
+}
+.cardPics{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(5px);
+}
+.cardPics:hover {
+  filter: blur(0px);
+}
+.cardPics:hover ~ .cardButton{
+  /* animation-name: goDown;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; */
+  animation: 0.5s ease-in-out 0s 1 normal both running goDown;
+}
+.cardButton:hover {
+  /* animation-name: goDown;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both; */
+  animation: 0.5s ease-in-out 0s 1 normal both running goDown, 0.5s ease-in-out 0s 1 normal both running colorChange;
+  color: white;
+}
+
+@keyframes goUp {
+  from{
+    transform: translateY(80%);
+  }
+  to{
+    transform: translateY(0%);
+  }
+}
+@keyframes goDown {
+  from{
+    transform: translateY(0%);
+  }
+  to{
+    transform: translateY(80%);
+  }
+}
+@keyframes colorChange {
+  0%{
+    background-color: white;
+  }
+  2% {
+    background: linear-gradient(to right, black 2%, white );
+  }
+  4% {
+    background: linear-gradient(to right, black 4%, white );
+  }
+  5% {
+    background: linear-gradient(to right, black 5%, white );
+  }
+  10% {
+    background: linear-gradient(to right, black 10%, white );
+  }
+  15% {
+    background: linear-gradient(to right, black 15%, white );
+  }
+  20% {
+    background: linear-gradient(to right, black 20%, white );
+  }
+  25% {
+    background: linear-gradient(to right, black 25%, white );
+  }
+  30% {
+    background: linear-gradient(to right, black 30%, white );
+  }
+  35% {
+    background: linear-gradient(to right, black 35%, white );
+  }
+  40% {
+    background: linear-gradient(to right, black 40%, white );
+  }
+  45% {
+    background: linear-gradient(to right, black 45%, white );
+  }
+  50% {
+    background: linear-gradient(to right, black 50%, white );
+  }
+  55% {
+    background: linear-gradient(to right, black 55%, white );
+  }
+  60% {
+    background: linear-gradient(to right, black 60%, white );
+  }
+  65% {
+    background: linear-gradient(to right, black 65%, white );
+  }
+  70% {
+    background: linear-gradient(to right, black 70%, white );
+  }
+  75% {
+    background: linear-gradient(to right, black 75%, white );
+  }
+  80% {
+    background: linear-gradient(to right, black 80%, white );
+  }
+  85% {
+    background: linear-gradient(to right, black 85%, white );
+  }
+  90% {
+    background: linear-gradient(to right, black 90%, white );
+  }
+  95% {
+    background: linear-gradient(to right, black 95%, white );
+  }
+  97% {
+    background: linear-gradient(to right, black 97%, white );
+  }
+  100%{
+    background-color: black;
+  }
+}
+
+.cardButton {
+  position: absolute;
+  width: 80%;
+  text-align: center;
+  font-size: 1rem;
+  color: black;
+  padding: 15px 1px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid turquoise;
+  box-shadow: -2px 2px 10px 1px rgba(0, 0, 0, 1);
+  /* animation-name: goUp;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out; */
+  animation: 0.5s ease-in-out 0s 1 normal both running goUp;
+}
+
+
+
+
+
+/* =========== Fifth SECTION =========== */
+
+#fifth_section{
+
+  min-height: 60vh;
+  background-color: #FFF2D4;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: repeat(6,minmax(60px,auto));
+  grid-template-areas:
+  "... ... ... ..."
+  "... container2 container3 ..."
+  "container1 container2 container3 container4"
+  "container1 container2 container3 container4"
+  "container1 container2 container3 container4"
+  "container1 container2 container3 container4";
+  position: relative;
+  overflow: hidden;
+}
+
+#container1 {
+  grid-area: container1;
+  background: black;
+  border-radius: 200px 0px 0px 0px;
+  box-shadow: -10px -10px 10px 1px rgba(176, 253, 205, 1);
+  z-index: 2;
+  animation: 1.5s ease-in-out 0.8s 1 normal both running container;
+}
+#container2 {
+  grid-area: container2;
+  background: black;
+  border-radius: 60px 0px 0px 0px;
+  box-shadow: -10px -5px 10px 1px rgba(176, 253, 205, 1);
+  animation: 1.5s ease-in-out 0.5s 1 normal both running container;
+}
+#container3 {
+  grid-area: container3;
+  background: black;
+  border-radius: 0px 60px 0px 0px;
+  box-shadow: 10px -5px 10px 1px rgba(176, 253, 205, 1);
+  animation: 1.5s ease-in-out 0.7s 1 normal both running container;
+}
+#container4 {
+  grid-area: container4;
+  background: black;
+  border-radius: 0px 200px 0px 0px;
+  box-shadow: 10px 1px 10px 1px rgba(176, 253, 205, 1);
+  z-index: 2;
+  animation: 1.5s ease-in-out 0.5s 1 normal both running container;
+}
+@keyframes container {
+
+  0% {
+    transform: translateY(100%);
+  }
+
+  100%{
+    transform: translateY(0%);
+  }
+}
+
+#skills {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100;
+  z-index: 3;
+  color: white;
+}
+
+
+
+/* =========== Sixth SECTION =========== */
+
+#sixth_section{
+  min-height: 100vh;
+  background-color: black;
+
+
+}
+.skillClass{
+  color: white;
+  font-size: 2.5em;
+}
+.skills{
+  width:100%;
+  position:relative;
+  padding: 0 0 20px 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:center;
+  align-items:center;
+  align-content:center;
+}
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  width: 310px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-radius: 25px;
+  padding: 15px 5px;
+  margin: 20px;
+  border: 2px solid turquoise;
+  box-shadow: -1px -1px 20px 1px turquoise;
+}
+ul {
+  padding: 20px 10px 0px 10px;
+  margin: 30px 0 -10px 0;
+  width: 100%;
+}
+li {
+  list-style: none;
+  margin-bottom:50px;
+  background:#dedede;
+  height:6px;
+  position: relative;
+}
+em {
+  font-size: 18px;
+  position:relative;
+  top:-30px;
+}
+span {
+  height: inherit;
+  background-color: #94c245;
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  position:absolute;
+}
+
+.beginner {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: minmax(min-content,auto);
+  margin: 15px 5px 0px 5px;
+  width: 100%;
+}
+
+.one1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  color: rgba(255,242,212,1);
+  margin: 0;
+  width: 100%;
+}
+.two2 {
+  width: 100%;
+  margin: 0 20px;
+  text-align: left;
+  padding: 0;
+}
+.three3 {
+  width: 100%;
+  margin: 0 20px;
+  text-align: right;
+  padding: 0;
+}
+
+
+
+
+.YAY50 {
+  width: 50%;
+  animation: YAY50 2s ease-out;
+}
+.YAY60 {
+  width: 60%;
+  animation: YAY60 2s ease-out;
+}
+.YAY70 {
+  width: 70%;
+  animation: YAY70 2s ease-out;
+}
+.YAY75 {
+  width: 75%;
+  animation: YAY75 2s ease-out;
+}
+.YAY80 {
+  width: 80%;
+  animation: YAY80 2s ease-out;
+}
+.YAY85 {
+  width: 85%;
+  animation: YAY85 2s ease-out;
+}
+.YAY90 {
+  width: 90%;
+  animation: YAY90 2s ease-out;
+}
+.YAY95 {
+  width: 95%;
+  animation: YAY95 2s ease-out;
+}
+.YAY100 {
+  width: 100%;
+  animation: YAY100 2s ease-out;
+}
+
+@keyframes YAY40 {
+  0%  { width:0px;}
+  100%{ width:40%;}
+}
+@keyframes YAY50 {
+  0%  { width:0px;}
+  100%{ width:50%;}
+}
+@keyframes YAY60 {
+  0%  { width:0px;}
+  100%{ width:60%;}
+}
+@keyframes YAY70 {
+  0%  { width:0px;}
+  100%{ width:70%;}
+}
+@keyframes YAY75 {
+  0%  { width:0px;}
+  100%{ width:75%;}
+}
+@keyframes YAY80 {
+  0%  { width:0px;}
+  100%{ width:80%;}
+}
+@keyframes YAY85 {
+  0%  { width:0px;}
+  100%{ width:85%;}
+}
+@keyframes YAY90 {
+  0%  { width:0px;}
+  100%{ width:90%;}
+}
+@keyframes YAY95 {
+  0%  { width:0px;}
+  100%{ width:95%;}
+}
+@keyframes YAY100 {
+  0%  { width:0px;}
+  100%{ width:100%;}
+}
+
+
+/* =========== Seventh SECTION =========== */
+
+#seventh_section{
+  min-height: 10vh;
+  min-width: 100%;
+  background: #FFF2D4;
+  display: inline-grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4,minmax(min-content,auto));
+}
+#certificateH2 {
+  place-self: center;
+  padding: 10px;
+}
+#certificateH5 {
+  padding-bottom: 10px;
+  margin: 0;
+  place-self: center;
+  color: #3B6CFF;
+}
+#certificateP {
+  color: grey;
+  place-self: center;
+  padding-bottom: 10px;
+}
+
+#mediaBuyerPic {
+  width: 50%;
+  height: auto;
+  align-self: center;
+  place-self: center;
+  margin: 10px;
+  border: 1px solid turquoise;
+  box-shadow: -1px -1px 20px 5px black;
+}
+
+
+/* =========== Eighth SECTION =========== */
+
+
+#finalSection{
+  display: grid;
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)), url(https://picsum.photos/1000/) no-repeat center center;
+  background-size: cover;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,minmax(min-content,max-content)) auto minmax(min-content,max-content);
+}
+.socialMedia{
+  place-self: center;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3,1fr) ;
+  grid-template-rows: minmax(min-content,auto);
+  margin: 30px 0 50px 0;
+
+}
+.socialMediaIcon{
+  width: 70px;
+  height: auto;
+  place-self: center;
+  align-self: center;
+}
+#finalP {
+  place-self: center;
+  margin: 50px 0 0 0;
+}
+#finalH2 {
+  color: white;
+  place-self: center;
+  font-size: 4rem;
+}
+#finalH5 {
+  place-self: center;
+  font-size: 1rem;
+  color: #FFF2D4;
+  margin: 5px 0 30px 0;
+}
+#emailButton {
+  place-self: center;
+  padding: 15px;
+  margin: 30px 0;
+  background-color: turquoise;
+  border: 1px solid rgb(246, 198, 234);
+  color: black;
+  border-radius: 10px;
+  box-shadow: 1px -2px 5px 1px rgba(246, 198, 234, 0.5);
+}

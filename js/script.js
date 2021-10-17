@@ -9,7 +9,6 @@ const meFromLeft = document.getElementById('meFromLeft');
 // HERE WE MOVE ME FROM LEFT
 const observer = new IntersectionObserver(callbackFunction, {
   rootMargin: "0px 0px -30% 0px",
-  thresholds: 1
 });
 
 function callbackFunction(entries){
@@ -30,7 +29,6 @@ const meFromTopRight = document.getElementById('meFromTopRight');
 
 const ob = new IntersectionObserver(callback,{
   rootMargin: "0px 0px -30% 0px",
-  thresholds: 1
 });
 
 function callback(entries){
@@ -48,7 +46,6 @@ ob.observe(meFromTopRight);
 
 const ob1 = new IntersectionObserver(callback1,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 
@@ -72,7 +69,6 @@ function callback1(entries){
 // 50 works
 const ob50 = new IntersectionObserver(callback50,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be50 = document.querySelectorAll('.be50')
@@ -93,7 +89,6 @@ function callback50(entries){
 // 60
 const ob60 = new IntersectionObserver(callback60,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be60 = document.querySelectorAll('.be60')
@@ -115,7 +110,6 @@ function callback60(entries){
 
 const ob70 = new IntersectionObserver(callback70,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be70 = document.querySelectorAll('.be70')
@@ -137,7 +131,6 @@ function callback70(entries){
 
 const ob75 = new IntersectionObserver(callback75,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be75 = document.querySelectorAll('.be75')
@@ -158,7 +151,6 @@ function callback75(entries){
 
 const ob80 = new IntersectionObserver(callback80,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be80 = document.querySelectorAll('.be80')
@@ -180,7 +172,6 @@ function callback80(entries){
 
 const ob85 = new IntersectionObserver(callback85,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be85 = document.querySelectorAll('.be85')
@@ -201,7 +192,6 @@ function callback85(entries){
 // ========================================
 const ob90 = new IntersectionObserver(callback90,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be90 = document.querySelectorAll('.be90')
@@ -223,7 +213,6 @@ function callback90(entries){
 
 const ob95 = new IntersectionObserver(callback95,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be95 = document.querySelectorAll('.be95')
@@ -244,7 +233,6 @@ function callback95(entries){
 // ========================================
 const ob100 = new IntersectionObserver(callback100,{
   rootMargin: "0px 0px -10% 0px",
-  thresholds: 0.05
 });
 
 let be100 = document.querySelectorAll('.be100')

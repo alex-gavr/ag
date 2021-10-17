@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/game.css">
+    <title> Play with me</title>
+  </head>
+  <body data-barba="wrapper">
+    <div data-barba="container" data-barba-namespace="game" class="wrapper">
+      <div class="explainRules">
+        <h1>Привет ✌️ Потрясающе, что ты сюда заглянул</h1>
+        <h2>Есть предложение сыграть в игру 🙂</h2>
+        <p class="secondaryText">Правила просты.</p>
+        <div class="rules">
+          <p class="rulesChild">Ты собираешь 3️⃣ одинаковых картинки</p>
+          <p id="pointer">👉</p>
+          <p class="rulesChild">Я перекидываю тебе 1️⃣0️⃣0️⃣0️⃣ рублей на карту.</p>
+        </div>
+        <p id="ready">Сможешь собрать?</p>
+      </div>
+      <div class="picrutes">
+        <div class="containerForImage">
+          <img src="pics/forGame/1.jpg" alt="randomPics" class="randomPic" id="firstImage">
+        </div>
+        <div class="containerForImage">
+          <img src="pics/forGame/1.jpg" alt="randomPics" class="randomPic" id="secondImage">
+        </div>
+        <!-- <div class="containerForImage">
+          <img src="pics/forGame/1.jpg" alt="randomPics" class="randomPic" id="thirdImage">
+        </div> -->
+      </div>
+      <p class="secondaryText">Шанс выигрыша: 0.05%</p>
+      <p class="secondaryText" id="winText">Ты выиграл 0 раз</p>
+      <button type="button" name="button" class="button" id="playButton">Сыграть</button>
+      <div class="bottomButtons">
+        <a href="https://www.tinkoff.ru/cf/2FOM2MBPxnK" class="button invis" id="youWon">Забрать Выигрыш 🥳</a>
+        <button type="button" name="button" class="button" id="goBackButton" onclick="document.location='index.html'"> На Главную</button>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
+    <script src='https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js'></script>
+    <script src="js/barbaAnime.js"></script>
+    <script src="js/randomPics.js"></script>
+    <script src="js/youWon.js"></script>
+  </body>
+</html>

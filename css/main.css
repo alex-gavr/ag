@@ -9,6 +9,12 @@
 body{
   background-color: black;
   color: gray;
+  position:relative;
+}
+.wrapall{
+  background-color: black;
+  color: gray;
+  position:relative;
 }
 h1 {
   padding: 0;
@@ -45,19 +51,7 @@ p {
   margin: 0;
 
 }
-header {
-  background-color: black;
-  color: white;
-  margin: 10px;
-  width: 98%;
-  min-height: 5vh;
-  border: 2px solid turquoise;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  align-content: center;
-  visibility: collapse;
-}
+
 
 
 
@@ -65,6 +59,94 @@ header {
 /* ====================================
               IDs and Classes
  ====================================*/
+ /* =========== MENU =========== */
+ #menu{
+   position: fixed;
+   top: 0;
+   background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+   display: flex;
+   width: 0;
+   height: 0;
+   overflow: hidden;
+   z-index: 998;
+   flex-flow: column nowrap;
+   border-radius: 50%;
+ }
+ #close {
+   align-self: flex-end;
+   font-size: 3rem;
+   color: black;
+   padding: 10px;
+   cursor: pointer;
+ }
+ ul.menu{
+   display: flex;
+   flex-flow: column nowrap;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   margin-top: 150px;
+ }
+ li.menu{
+   width: 80%;
+   height: auto;
+   background-color: black;
+   text-align: center;
+   padding: 20px;
+   color: turquoise;
+   border-radius: 25px;
+ }
+
+ /* =========== HEADER =========== */
+
+ header {
+   background-color: black;
+   color: white;
+   width: 100%;
+   min-height: 5vh;
+   border-bottom: 2px solid turquoise;
+   display: flex;
+   flex-flow: row wrap;
+   justify-content:space-around;
+   align-content: center;
+   align-items: center;
+   position: fixed;
+   z-index: 500;
+ }
+ .icon {
+   font-size: 2.5rem;
+ }
+ .lampDiv {
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-content: center;
+   align-items: center;
+   height: 90px;
+   width:auto;
+ }
+ #logo {
+   /* padding: 5px 0px 0px 10px; */
+   font-size: 1.5rem;
+   color: white;
+ }
+ #lamp {
+   width: 50px;
+   height: auto;
+   transform: rotate(10deg);
+   padding: 5px 0 10px 0;
+   z-index: 100;
+   position: absolute;
+ }
+ #span {
+   opacity: 0;
+   width: 0;
+   height: auto;
+   z-index: 999;
+   position: absolute;
+ }
+
+/* =========== FIRST SECTION =========== */
 
 .first_section_div{
   display: flex;
@@ -74,13 +156,13 @@ header {
   padding: 1.5rem 1.5rem;
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
-  animation-name: example;
+  /* animation-name: example; */
   animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode:forwards;
   animation-timing-function: ease-in-out;
-  transform: translateY(-100vh);
+  /* transform: translateY(-100vh); */
 }
 
 @keyframes example {
@@ -116,9 +198,7 @@ header {
   }
 }
 
-.icon {
-  font-size: 2rem;
-}
+
 
 .main_button{
   height: 45px;
@@ -130,6 +210,9 @@ header {
   color: black;
   border-radius: 10px;
   box-shadow: 1px -2px 5px 1px rgba(246, 198, 234, 0.5);
+  z-index: 60;
+  cursor: pointer;
+
 }
 .secondary_button{
   height: 45px;
@@ -144,11 +227,8 @@ header {
 }
 
 
-}
-#logo {
-  padding: 5px 0px 0px 10px;
-  font-size: 1.5rem;
-}
+
+
 
 /* =========== FIRST SECTION =========== */
 #first_section {
@@ -274,11 +354,11 @@ header {
   grid-gap: 0;
   overflow: hidden;
 
+
 }
 #item1 {
   grid-area: item1;
   background: #FFF2D4;
-
 }
 
 #item2 {
@@ -492,53 +572,40 @@ header {
 
 #fifth_section{
 
-  min-height: 60vh;
+  min-height: 80vh;
   background-color: #FFF2D4;
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  grid-template-rows: repeat(6,minmax(60px,auto));
-  grid-template-areas:
-  "... ... ... ..."
-  "... container2 container3 ..."
-  "container1 container2 container3 container4"
-  "container1 container2 container3 container4"
-  "container1 container2 container3 container4"
-  "container1 container2 container3 container4";
   position: relative;
   overflow: hidden;
 }
 
-#container1 {
-  grid-area: container1;
+.div12 {
   background: black;
   border-radius: 200px 0px 0px 0px;
   box-shadow: -10px -10px 10px 1px rgba(176, 253, 205, 1);
-  z-index: 2;
-  animation: 1.5s ease-in-out 0.8s 1 normal both running container;
+  width: 25vw;
+  height: 50vh;
+  position: absolute;
+  top: 95%;
+}
+
+#container1 {
+  z-index: 4;
+  left: 0vw;
 }
 #container2 {
-  grid-area: container2;
-  background: black;
-  border-radius: 60px 0px 0px 0px;
-  box-shadow: -10px -5px 10px 1px rgba(176, 253, 205, 1);
-  animation: 1.5s ease-in-out 0.5s 1 normal both running container;
+  z-index: 3;
+  left: 25vw;
 }
 #container3 {
-  grid-area: container3;
-  background: black;
-  border-radius: 0px 60px 0px 0px;
-  box-shadow: 10px -5px 10px 1px rgba(176, 253, 205, 1);
-  animation: 1.5s ease-in-out 0.7s 1 normal both running container;
+  z-index: 2;
+  left: 50vw;
 }
 #container4 {
-  grid-area: container4;
-  background: black;
-  border-radius: 0px 200px 0px 0px;
-  box-shadow: 10px 1px 10px 1px rgba(176, 253, 205, 1);
-  z-index: 2;
-  animation: 1.5s ease-in-out 0.5s 1 normal both running container;
+  z-index: 1;
+  left: 75vw;
 }
-@keyframes container {
+
+/* @keyframes container {
 
   0% {
     transform: translateY(100%);
@@ -547,15 +614,15 @@ header {
   100%{
     transform: translateY(0%);
   }
-}
+} */
 
 #skills {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 100;
-  z-index: 3;
+  width: 100%;
+  z-index: 200;
   color: white;
 }
 
@@ -755,6 +822,8 @@ span {
   color: grey;
   place-self: center;
   padding-bottom: 10px;
+  width: 80%;
+  text-align: center;
 }
 
 #mediaBuyerPic {

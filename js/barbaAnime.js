@@ -1,35 +1,14 @@
 
 
-
-const animationEnter = () => {
-  return gsap.from(container, {
-    autoAlpha: 0,
-    duration: 2,
-    clearProps: 'all'
-  })
-}
-
-const animationLeave = () => {
-  return gsap.to(container, {
-    autoAlpha: 0,
-    duration: 2,
-    clearProps: 'all'
-  })
-}
+console.info('🚀App:init');
 
 barba.init({
-  transitions: [
-    {
-      once({next}){
-        animationEnter(next.container);
-      },
-      leave ({current}){
-        console.log('enter');
-        animationLeave(current.container);
-      },
-      enter ({next}){
-        animationEnter(next.container);
-      },
+  transitions: [{
+    leave(data) {
+      console.log('hello');
+    },
+    enter(data) {
+      console.log('bye');
     }
-  ]
+  }]
 });

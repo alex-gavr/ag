@@ -397,7 +397,7 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
                     url("../pics/me.png");
     background-position: center;
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
 
   }

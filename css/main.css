@@ -381,7 +381,7 @@ header {
   pointer-events:none;
 }
 
-@media (max-width:720px){
+@media only screen and (max-width:720px){
   #h1game{
     font-size: 32px;
   }
@@ -397,9 +397,8 @@ header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
                     url("../pics/me.png");
     background-position: center;
-    background-size: cover;
+    background-size: cover !important;
     background-repeat: no-repeat;
-
   }
 }
 

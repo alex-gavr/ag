@@ -11,7 +11,11 @@
 </head>
 
 <body data-barba="wrapper">
-  <div class="wrapall" data-barba="container" data-barba-namespace="home">
+  <div class="loading-container">
+    <div class="loading-screen">
+    </div>
+  </div>
+  <div class="wrapall" data-barba="container" data-barba-namespace="index">
     <div id="menu">
       <div id="close">X</div>
       <ul class="menu">
@@ -21,7 +25,6 @@
         <li class="menu">HOME</li>
       </ul>
     </div>
-
     <header class="header">
       <h2 href="#" id="logo">
         Александр Гавриленко
@@ -30,19 +33,15 @@
         <img src="pics/light.png" alt="Lamp" id="lamp">
       </div>
     </header>
-
-
     <!-- ======= FIRST SECTION ======= -->
     <section id="first_section">
       <div class="first_section_div">
         <h1>Привет<br> Меня зовут Александр</h1>
         <h4 id="whatIdo">Я занимаюсь Фронт-Енд разработкой и не только</h4>
-        <button type="button" name="button" class="main_button" onclick="document.location='game.html'"> Нажми эту кнопку 🙂</button>
-        <button type="button" name="button" class="secondary_button"> Нет, лучше эту 😁 </button>
+        <a class="main_button" href="game.html">Нажми эту кнопку 🙂</a>
+        <a class="secondary_button" href="game.html"> Нет, лучше эту 😁 </a>       
       </div>
-
     </section>
-
     <!-- ======= SECOND SECTION ======= -->
     <section id="second_section">
       <div id="meFromLeft">
@@ -61,11 +60,7 @@
         </div>
       </div>
     </section>
-
-
     <!-- ======= THIRD SECTION ======= -->
-
-
     <section id="third_section">
       <div id="item1"></div>
       <div id="item2"></div>
@@ -73,9 +68,7 @@
       <div id="item4"></div>
       <h2 id="choose">Выбирай Раздел</h2>
     </section>
-
     <!-- ======= FOURTH SECTION ======= -->
-
     <section id="fourth_section">
       <div class="card">
         <img src="pics/graduation.jpg" alt="Me Graduating" class="cardPics">
@@ -102,9 +95,7 @@
         <button type="button" name="button6" class="cardButton">Хобби</button>
       </div>
     </section>
-
     <!-- ======= FIFTH SECTION ======= -->
-
     <section id="fifth_section">
       <div id="container1" class="div12"></div>
       <div id="container2" class="div12"></div>
@@ -112,9 +103,7 @@
       <div id="container4" class="div12"></div>
       <h2 id="skills">Умения и Языки</h2>
     </section>
-
     <!-- ======= SIXTH SECTION ======= -->
-
     <section id="sixth_section">
       <div class="skills">
         <div class="wrapper">
@@ -134,7 +123,6 @@
             <li><span class="be90 "></span><em>Онлайн Маркетинг</em></li>
           </ul>
         </div>
-
         <div class="wrapper">
           <h2 class="skillClass">Фронт-Енд Разработка</h2>
           <div class="beginner">
@@ -152,8 +140,6 @@
             <li><span class="be90 "></span><em>UI / UX</em></li>
           </ul>
         </div>
-
-
         <div class="wrapper">
           <h2 class="skillClass">Онлайн Маркетинг</h2>
           <div class="beginner">
@@ -173,7 +159,6 @@
             <li><span class="be50 "></span><em>Копирайтинг</em></li>
           </ul>
         </div>
-
         <div class="wrapper">
           <h2 class="skillClass">Программы</h2>
           <div class="beginner">
@@ -192,7 +177,6 @@
             <li><span class="be70 "></span><em>Microsoft Office</em></li>
           </ul>
         </div>
-
         <div class="wrapper">
           <h2 class="skillClass">Языки</h2>
           <div class="beginner">
@@ -209,22 +193,16 @@
             <li><span class="be70 "></span><em>Немецкий</em></li>
           </ul>
         </div>
-
       </div>
     </section>
-
     <!-- ======= SEVENTH SECTION ======= -->
-
     <section id="seventh_section">
       <h2 id="certificateH2">Сертификаты</h2>
       <h5 id="certificateH5">Media Buyer Pro Facebook от школы Targetorium</h5>
       <p id="certificateP">С отличием окончил курс под руководством преподавателя курса Павла Антонова (Team-Lead HTTPool).</p>
       <img src="pics/proficiency.png" alt="Me Media Buyer" id="mediaBuyerPic">
     </section>
-
-
     <section id="finalSection">
-
       <p id="finalP">для связи</p>
       <h2 id="finalH2">Давай Работать Вместе!</h2>
       <h5 id="finalH5">Не стесняйся написать мне, даже если это просто дружеское привет 😁</h5>
@@ -234,15 +212,26 @@
         <img src="pics/insta.png" alt="Instagram" class="socialMediaIcon">
         <img src="pics/telegram.png" alt="Telegram" class="socialMediaIcon">
       </div>
-
     </section>
   </div>
-  <script type="javascript" src="https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-  <script src="js/barbaAnime.js"></script>
-  <script src="js/anime.min.js"></script>
+  <!-- jquery -->
+  <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous">
+  </script>
+  <!-- Barba -->
+  <script src="https://unpkg.com/@barba/core"></script>
+  <!-- Gsap -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script> 
+  <!-- Anime JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> 
+  <script type="module" src="js/main.js"></script>
+  <!-- <script src="js/anime.min.js"></script>
   <script src="js/script.js"></script>
-  <script src="js/animation.js"></script>
+  <script src="js/animation.js"></script> -->
+  <!-- <script src="js/randomPics.js"></script>
+  <script src="js/youWon.js"></script> -->
 </body>
 
 </html>

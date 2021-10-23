@@ -1,16 +1,21 @@
 
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ru/RU" dir="ltr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/game.css">
+    <link rel="stylesheet" href="css/main.css">
     <title> Play with me</title>
   </head>
+
   <body data-barba="wrapper">
-    <div data-barba="container" data-barba-namespace="game" class="wrapper">
+    <div class="loading-container">
+      <div class="loading-screen">
+      </div>
+    </div>
+  <div data-barba="container" data-barba-namespace="game" class="wrapperall">
       <div class="explainRules">
         <h1>Привет ✌️ Потрясающе, что ты сюда заглянул</h1>
         <h2>Есть предложение сыграть в игру 🙂</h2>
@@ -35,16 +40,30 @@
       </div>
       <p class="secondaryText">Шанс выигрыша: 0.05%</p>
       <p class="secondaryText" id="winText">Ты выиграл 0 раз</p>
-      <button type="button" name="button" class="button" id="playButton">Сыграть</button>
+      <a class="button" id="playButton">Сыграть</a>
       <div class="bottomButtons">
         <a href="https://www.tinkoff.ru/cf/2FOM2MBPxnK" class="button invis" id="youWon">Забрать Выигрыш 🥳</a>
-        <button type="button" name="button" class="button" id="goBackButton" onclick="document.location='index.html'"> На Главную</button>
+        <a class="button" id="goBackButton" href='index.html'>На Главную</a>
       </div>
-    </div>
-    <script type="javascript" src="https://unpkg.com/@barba/core@2.9.7/dist/barba.umd.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script>
-    <script src="js/barbaAnime.js"></script>
-    <script src="js/randomPics.js"></script>
-    <script src="js/youWon.js"></script>
+    </div>  
+    <!-- jquery -->
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous">
+    </script>
+    <!-- Barba -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <!-- Gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.8.0/gsap.min.js"></script> 
+    <!-- Anime JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script> 
+
+    <script type="module" src="js/main.js"></script>
+    <!-- <script src="js/anime.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/animation.js"></script> -->
+    <!-- <script src="js/randomPics.js"></script>
+    <script src="js/youWon.js"></script> -->
   </body>
 </html>

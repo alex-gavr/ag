@@ -1,15 +1,8 @@
-/* ====================================
-                  Main CSS
- ====================================*/
+
+/* MAIN CSS */
 
 * {
   box-sizing: border-box;
-}
-
-body{
-  background-color: black;
-  color: gray;
-  position:relative;
 }
 .wrapall{
   background-color: black;
@@ -49,11 +42,38 @@ p {
   font-size: 1rem;
   color: rgba(251,241,222,1);
   margin: 0;
-
+  text-align: center;
+}
+a{
+  text-decoration: none;
+  text-align: center;
 }
 
 
+/* Loading Screen Styling */
 
+.loading-screen {
+  position: relative;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  background-color: #4BEDC2;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(0) skewX(0);
+  transform-origin: top left;
+}
+
+.loading-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 9999;
+  pointer-events: none;
+}
 
 
 /* ====================================
@@ -112,6 +132,7 @@ p {
    align-items: center;
    position: fixed;
    z-index: 500;
+   opacity: 0;
  }
  .icon {
    font-size: 2.5rem;
@@ -127,23 +148,23 @@ p {
  }
  #logo {
    /* padding: 5px 0px 0px 10px; */
-   font-size: 1.5rem;
-   color: white;
- }
+  font-size: 1.5rem;
+  color: white;
+}
  #lamp {
-   width: 50px;
-   height: auto;
-   transform: rotate(10deg);
-   padding: 5px 0 10px 0;
-   z-index: 100;
-   position: absolute;
+  width: 50px;
+  height: auto;
+  transform: rotate(10deg);
+  padding: 5px 0 10px 0;
+  z-index: 100;
+  position: absolute;
  }
  #span {
-   opacity: 0;
-   width: 0;
-   height: auto;
-   z-index: 999;
-   position: absolute;
+  opacity: 0;
+  width: 0;
+  height: auto;
+  z-index: 999;
+  position: absolute;
  }
 
 /* =========== FIRST SECTION =========== */
@@ -229,7 +250,113 @@ p {
 }
 
 
+/*  GAME  */
+.secondaryText{
+  color: rgba(255,255,255,0.5);
+  font-size: 1rem;
+}
 
+.wrapperall{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(to right, #c33764, #1d2671);
+}
+.rules{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5px;
+  font-size: 16px;
+}
+.rulesChild{
+  padding: 0.8rem;
+  margin: 5px 10px;
+  background-color: rgba(0,0,0,0.7);
+  color: white;
+  border-radius: 25px;
+}
+#pointer{
+  font-size: 7vw;
+  padding: 0.8rem;
+}
+#ready {
+  color: turquoise;
+}
+/* IMAGES CSS */
+.picrutes{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  flex-grow: 2;
+  gap: 10px 25px;
+  /* position:relative;
+  overflow:hidden; */
+}
+.containerForImage{
+  display:flex;
+  justify-content: center;
+  align-content:center;
+  align-items: center;
+  width: 40%;
+}
+.randomPic{
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  box-shadow: -5px -1px 20px black;
+}
+
+/* Buttons */
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 25px;
+  width: 10em;
+}
+#playButton {
+  color: turquoise;
+  background-color: black;
+  border: 2px solid turquoise;
+  box-shadow: 5px -1px 20px teal;
+  cursor:pointer;
+}
+.bottomButtons{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content:space-around;
+  align-content:center;
+  align-items: center;
+}
+#goBackButton{
+  color: white;
+  background-color: rgba(0,0,0,0);
+  border: 2px solid #ffc3a0;
+  box-shadow: 5px -1px 20px teal;
+  align-self: flex-end;
+  cursor:pointer;
+}
+#youWon{
+  background: linear-gradient(to right, #ffafbd, #ffc3a0);
+  color: black;
+  border: 2px solid #636FA4;
+  box-shadow: -5px -3px 20px teal;
+  cursor:pointer;
+  font-size: 0.9rem;
+  text-align: center;
+}
+.invis{
+  opacity: 0;
+  pointer-events:none;
+}
 
 
 /* =========== FIRST SECTION =========== */

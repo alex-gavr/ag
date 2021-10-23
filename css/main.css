@@ -393,10 +393,11 @@ header {
     align-items: flex-start;
     align-content: center;
     justify-content: center;
-    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
-                    url("../pics/me.png");
-    background-position: center;
+    url("../pics/me.png");
+    width: 100vh;
+    height: 100vh;
+    background-position: center, center;
     background-size: cover !important;
     background-repeat: no-repeat;
   }

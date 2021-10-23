@@ -6,7 +6,6 @@
 }
 .wrapall{
   background-color: black;
-  color: gray;
   position:relative;
 }
 h1 {
@@ -393,13 +392,13 @@ header {
     align-items: flex-start;
     align-content: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
-    url("../pics/me.png");
-    width: 100vh;
-    height: 100vh;
-    background-position: center, center;
-    background-size: cover !important;
-    background-repeat: no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
+    url("../pics/me.png")no-repeat center center;
+    min-height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 

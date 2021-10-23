@@ -65,7 +65,7 @@ export function randomPicsFull(){
       } else {
         let t = randomPic.replace('.jpg','')
         console.log(t);
-        pic.src = `![${t}](pics/forGame/${randomPic})`;
+        pic.src=`/../pics/forGame/${randomPic}`;
         console.log(pic.src);
       }
     });

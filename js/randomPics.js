@@ -65,7 +65,7 @@ export function randomPicsFull(){
       } else {
         // let t = randomPic.replace('.jpg','')
         // console.log(t);
-        pic.src= `./pics/forGame/${randomPic}`;
+        pic.src= `https://alex-gavr.github.io/ag/pics/forGame/${randomPic}`;
         console.log(pic.src);
       }
     });

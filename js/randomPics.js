@@ -59,7 +59,8 @@ export function randomPicsFull(){
   playButton.addEventListener("click", () => {
     pics.forEach(pic =>{
       let randomPic = imgName[Math.floor(Math.random()*imgName.length)];
-      pic.src = `./pics/forGame/${randomPic}`;
+      pic.src = `../pics/forGame/${randomPic}`;
+      console.log(pic.src);
     });
   });
 }

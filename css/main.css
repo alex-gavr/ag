@@ -385,7 +385,7 @@ header {
   justify-content: center;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
-                  url("../pics/me.png");
+                  url("https://alex-gavr.github.io/ag/pics/me.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

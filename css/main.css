@@ -78,94 +78,94 @@ a{
 
 /* ====================================
               IDs and Classes
- ====================================*/
+====================================*/
  /* =========== MENU =========== */
- #menu{
-   position: fixed;
-   top: 0;
-   background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
-   display: flex;
-   width: 0;
-   height: 0;
-   overflow: hidden;
-   z-index: 998;
-   flex-flow: column nowrap;
-   border-radius: 50%;
- }
- #close {
-   align-self: flex-end;
-   font-size: 3rem;
-   color: black;
-   padding: 10px;
-   cursor: pointer;
- }
- ul.menu{
-   display: flex;
-   flex-flow: column nowrap;
-   justify-content: center;
-   align-items: center;
-   align-content: center;
-   margin-top: 150px;
- }
- li.menu{
-   width: 80%;
-   height: auto;
-   background-color: black;
-   text-align: center;
-   padding: 20px;
-   color: turquoise;
-   border-radius: 25px;
- }
+#menu{
+  position: fixed;
+  top: 0;
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  display: flex;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  z-index: 998;
+  flex-flow: column nowrap;
+  border-radius: 50%;
+}
+#close {
+  align-self: flex-end;
+  font-size: 3rem;
+  color: black;
+  padding: 10px;
+  cursor: pointer;
+}
+ul.menu{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-top: 150px;
+}
+li.menu{
+  width: 80%;
+  height: auto;
+  background-color: black;
+  text-align: center;
+  padding: 20px;
+  color: turquoise;
+  border-radius: 25px;
+}
 
- /* =========== HEADER =========== */
+/* =========== HEADER =========== */
 
- header {
-   background-color: black;
-   color: white;
-   width: 100%;
-   min-height: 5vh;
-   border-bottom: 2px solid turquoise;
-   display: flex;
-   flex-flow: row wrap;
-   justify-content:space-around;
-   align-content: center;
-   align-items: center;
-   position: fixed;
-   z-index: 500;
-   opacity: 0;
- }
- .icon {
-   font-size: 2.5rem;
- }
- .lampDiv {
-   display: flex;
-   flex-flow: row wrap;
-   justify-content: center;
-   align-content: center;
-   align-items: center;
-   height: 90px;
-   width:auto;
- }
- #logo {
+header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  min-height: 5vh;
+  border-bottom: 2px solid turquoise;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content:space-around;
+  align-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 500;
+  opacity: 0;
+}
+.icon {
+  font-size: 2.5rem;
+}
+.lampDiv {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 90px;
+  width:auto;
+}
+#logo {
    /* padding: 5px 0px 0px 10px; */
   font-size: 1.5rem;
   color: white;
 }
- #lamp {
+#lamp {
   width: 50px;
   height: auto;
   transform: rotate(10deg);
   padding: 5px 0 10px 0;
   z-index: 100;
   position: absolute;
- }
- #span {
+}
+#span {
   opacity: 0;
   width: 0;
   height: auto;
   z-index: 999;
   position: absolute;
- }
+}
 
 /* =========== FIRST SECTION =========== */
 
@@ -251,6 +251,14 @@ a{
 
 
 /*  GAME  */
+#h1game{
+  padding: 10px;
+  color: white;
+}
+#h2game{
+  padding: 5px;
+  color: turquoise;
+}
 .secondaryText{
   color: rgba(255,255,255,0.5);
   font-size: 1rem;
@@ -356,6 +364,19 @@ a{
 .invis{
   opacity: 0;
   pointer-events:none;
+}
+
+
+@media (max-width:640px){
+  #h1game{
+    font-size: 32px;
+  }
+  #h2game{
+    font-size: 18px;
+  }
+  #first_section{
+    background-attachment: initial;
+  }
 }
 
 

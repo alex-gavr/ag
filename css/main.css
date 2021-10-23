@@ -168,6 +168,21 @@ header {
 }
 
 /* =========== FIRST SECTION =========== */
+#first_section {
+  display: flex;
+  align-items: flex-start;
+  align-content: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
+                  url("../pics/me.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow: hidden;
+}
 
 .first_section_div{
   display: flex;
@@ -178,14 +193,14 @@ header {
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
   /* animation-name: example; */
-  animation-duration: 3s;
+  /* animation-duration: 3s;
   animation-delay: 0s;
   animation-iteration-count: 1;
   animation-fill-mode:forwards;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out; */
   /* transform: translateY(-100vh); */
 }
-
+/* 
 @keyframes example {
   from {
     transform: translateY(-100vh);
@@ -217,7 +232,7 @@ header {
   to {
     transform: translateY(35vh);
   }
-}
+} */
 
 #whatIdo{
   padding: 20px 10px;
@@ -366,33 +381,29 @@ header {
   pointer-events:none;
 }
 
-
-@media (max-width:640px){
+@media (max-width:720px){
   #h1game{
     font-size: 32px;
   }
   #h2game{
     font-size: 18px;
   }
+  #first_section {
+    display: flex;
+    align-items: flex-start;
+    align-content: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
+                    url("../pics/me.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
-
 
 /* =========== FIRST SECTION =========== */
-#first_section {
-  display: flex;
-  align-items: flex-start;
-  align-content: center;
-  justify-content: center;
-  height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(48,213,200,0.5)),
-                  url("https://alex-gavr.github.io/ag/pics/me.png");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  position: relative;
-  overflow: hidden;
-}
+
 /* =========== SECOND SECTION =========== */
 #second_section {
   display: flex;

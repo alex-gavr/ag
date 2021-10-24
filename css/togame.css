@@ -1,0 +1,22 @@
+.game-leave{
+    transform: translateX(0);
+}
+.game-leave-active{
+    transition: all 0.7s;
+}
+.game-leave-to{
+    transform: translateX(-100%);
+}
+
+.game-enter{
+    transform: translateX(100%);
+}
+.game-enter-active{
+    transition: all 0.7s;
+}
+.game-enter-to{
+    transform: translateX(0);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

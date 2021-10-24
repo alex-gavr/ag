@@ -1,3 +1,9 @@
+/* TO GAME TRANSITIONS */
+@import 'togame.css';
+
+/* TO HOME */
+
+@import 'tohome.css';
 
 /* MAIN CSS */
 
@@ -6,7 +12,6 @@
 }
 .wrapall{
   background-color: black;
-  position:relative;
 }
 h1 {
   padding: 0;
@@ -839,6 +844,7 @@ em {
   font-size: 18px;
   position:relative;
   top:-30px;
+  color: #dedede;
 }
 span {
   height: inherit;
@@ -1049,3 +1055,5 @@ span {
   border-radius: 10px;
   box-shadow: 1px -2px 5px 1px rgba(246, 198, 234, 0.5);
 }
+
+

@@ -51,7 +51,7 @@ export function randomPicsFull(){
 
   let playButton = document.getElementById('playButton');
   let pics = document.querySelectorAll('.randomPic');
-  let currentUrl = window.location.href;
+  // let currentUrl = window.location.href;
 
 
 
@@ -59,15 +59,15 @@ export function randomPicsFull(){
   playButton.addEventListener("click", () => {
     pics.forEach(pic =>{
       let randomPic = imgName[Math.floor(Math.random()*imgName.length)];
-      if (currentUrl == "http:///127.0.0.1:5500/game.html"){
-        pic.src = `/pics/forGame/${randomPic}`;
-        console.log(pic.src);
-      } else {
+      // if (currentUrl == "http:///127.0.0.1:5500/game.html"){
+      //   pic.src = `/pics/forGame/${randomPic}`;
+      //   console.log(pic.src);
+      // } else {
         // let t = randomPic.replace('.jpg','')
         // console.log(t);
         pic.src= `https://alex-gavr.github.io/ag/pics/forGame/${randomPic}`;
         console.log(pic.src);
-      }
+      // }
     });
   });
 }

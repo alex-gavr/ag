@@ -1,0 +1,23 @@
+.index-leave{
+transform: translateX(0);
+position: relative;
+}
+.index-leave-active{
+transition: all 0.7s;
+}
+.index-leave-to{
+transform: translateX(100%);
+}
+
+.index-enter{
+transform: translateX(-100%);
+}
+.index-enter-active{
+transition: all 0.7s;
+}
+.index-enter-to{
+transform: translateX(0);
+position: absolute;
+top: 0;
+left: 0;
+}

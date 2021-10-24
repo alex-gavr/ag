@@ -5,6 +5,7 @@ import { animationFull } from "./animation.js";
 
 
 
+
 const loadingScreen = document.querySelector('.loading-screen');
 // gsap.to(loadingScreen, { duration: .5, scaleY: 1, transformOrigin: 'bottom left'})
 // gsap
@@ -37,70 +38,87 @@ const pageTransitionOut = (container) => {
 }
 
 
-// barba.hooks.after(() => {
-//   const oldScript = document.querySelectorAll(".removeThem");
-//   oldScript.forEach(oldScript =>{
-//     oldScript.remove();
-//   });
-// })
 
-// barba.hooks.beforeEnter(()=> {
-//   const oldScript = document.querySelectorAll("jscode");
-//   oldScript.forEach(script =>{
-//     script.remove();
-//   });
+
+// barba.init({ 
+//   debug: true,
+//   views: [
+//   {
+//     namespace: 'game',
+//     afterEnter(){
+//       randomPicsFull();
+//       youWonFull();
+//     }
+//   },
+//   {
+//     namespace: 'index',
+//     afterEnter(){
+//       scriptFull();
+//       animationFull();
+//     }
+//   }
+// ],
+//   transitions: [
+//     {
+//       leave: ({current})=> 
+//         pageTransitionIn(current.container),
+//         // data.current.container.remove();
+//       beforeEnter: ({next}) => {
+//         window.scrollTo(0,0);
+//       },
+//       enter({next}) {
+//         pageTransitionOut(next.container);
+//       }
+//   }]
 // });
 
-// barba.hooks.afterEnter(() {
-//   let script = document.createElement('script');
-//   script.src = 'js/randomPics.js'; // location of your draggable js file that is responsible for that image loading and dragging functionality
-//   next.container.appendChild(script);
-// });
+// to:{
+//   namespace: ['game']
+// },
 
-// barba.hooks.after(() => {
-//   const bottomDOM = document.getElementsByTagName("body")[0]
-//   const newScript = document.createElement("script")
-//   const oldScript = document.getElementById('randomPics')
-//   console.log(oldScript);
-//   oldScript.remove();
-  
-//   newScript.src = "js/randomPics.js";
-//   newScript.setAttribute('id','randomPics');
-//   bottomDOM.appendChild(newScript);
-// });
+barba.use(barbaCss);
 
-
-
-barba.init({ 
+barba.init({
   debug: true,
   views: [
-  {
-    namespace: 'game',
-    afterEnter(){
-      randomPicsFull();
-      youWonFull();
-    }
-  },
-  {
-    namespace: 'index',
-    afterEnter(){
-      scriptFull();
-      animationFull();
-    }
-  }
-],
-  transitions: [{
-      leave: ({current})=> 
-        pageTransitionIn(current.container),
-        // data.current.container.remove();
-      beforeEnter: ({next}) => {
-        window.scrollTo(0,0);
+      {
+        namespace: 'game',
+        afterEnter(){
+          randomPicsFull();
+          youWonFull();
+        }
       },
-      enter({next}) {
-        pageTransitionOut(next.container);
+      {
+        namespace: 'index',
+        afterEnter(){
+          scriptFull();
+          animationFull();
+        }
       }
-  }]
-});
+    ],
+  transitions: [
+    {
+      name: 'game', 
+      to:{
+        namespace: ['game']
+      },
+      sync: true,
+      leave() {},
+      enter() {},
+    },{
+      name: 'index',
+      to:{
+        namespace: ['index']
+      },
+      sync: true,
+      leave() {},
+      enter() {},
+    }
+  ]
+})
+
+
+
 
 // function reloadJs(src) {
 //   $('script[src="' + src + '"]').remove();

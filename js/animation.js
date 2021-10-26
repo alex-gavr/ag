@@ -130,6 +130,8 @@ export function animationFull(){
   let menu = document.querySelector('#menu');
   let body = document.getElementsByTagName('body')[0];
   let closeX = document.querySelector('#close');
+  let menuA = document.querySelectorAll('.menuA');
+  let menuToGame = document.getElementById('menuToGame');
 
 
 
@@ -200,6 +202,15 @@ export function animationFull(){
   closeX.addEventListener('click', e => {
     reverseAnimation();
   });
+
+  menuA.forEach(menu => {
+    menu.addEventListener('click', e => {
+      reverseAnimation();
+    });
+  })
+  
+  
+
 
 
 

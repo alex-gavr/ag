@@ -310,7 +310,7 @@ header {
 .rulesChild{
   padding: 0.8rem;
   margin: 5px 10px;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0,0,0,0.3);
   color: white;
   border-radius: 25px;
 }
@@ -384,8 +384,9 @@ header {
   border: 2px solid #636FA4;
   box-shadow: -5px -3px 20px teal;
   cursor:pointer;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
+  width: 11em;
 }
 .invis{
   opacity: 0;

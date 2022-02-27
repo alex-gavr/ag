@@ -324,14 +324,11 @@ header {
 /* IMAGES CSS */
 .picrutes{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: center;
   align-content:center;
   align-items: center;
-  flex-grow: 2;
-  gap: 10px 25px;
-  /* position:relative;
-  overflow:hidden; */
+  gap: 20px 30px;
 }
 .containerForImage{
   display:flex;
